@@ -12,9 +12,10 @@ jobs:
         id: vars
         shell: bash
         run: |
+          git checkout
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-          echo "::set-output name=commits_count::$(git rev-list --count master)"
+          echo "::set-output name=commits_count::$(git rev-list --count ${GITHUB_REF#refs/heads/})"
 
       - name: Another step
         run: |
