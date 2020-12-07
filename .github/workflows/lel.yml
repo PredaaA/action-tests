@@ -11,6 +11,7 @@ jobs:
         id: vars
         shell: bash
         run: |
+          echo "$(ls $GITHUB_WORKSPACE)"
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "::set-output name=sha_short::$(cd $GITHUB_WORKSPACE && git rev-parse --short HEAD)"
 
