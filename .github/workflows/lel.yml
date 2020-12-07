@@ -9,6 +9,5 @@ jobs:
     steps:
       - name: builtin
         run: echo Branch $GITHUB_REF - Commit $GITHUB_SHA
-    steps:
       - name: sh
         run: echo Commit ${{ git rev-parse --short HEAD }}
