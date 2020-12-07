@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: builtin
-        run: echo Branch $GITHUB_REF - Commit ${GITHUB_SHA::8}
+        run: echo Branch $GITHUB_REF - Commit ${GITHUB_SHA::7}
