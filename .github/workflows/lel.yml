@@ -7,13 +7,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
       - name: Declare some variables
         id: vars
         shell: bash
         run: |
           echo "$(ls $GITHUB_WORKSPACE)"
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "::set-output name=sha_short::$(cd $GITHUB_WORKSPACE && git rev-parse --short HEAD)"
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
       - name: Another step
         run: |
