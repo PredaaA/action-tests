@@ -5,6 +5,7 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     steps:
       - name: Hello world
         run: echo Branch $GITHUB_REF - Commit $GITHUB_SHA
