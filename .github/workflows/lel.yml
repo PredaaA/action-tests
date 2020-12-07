@@ -1,0 +1,10 @@
+name: lel
+
+on:
+  push:
+
+jobs:
+  build:
+    steps:
+      - name: Hello world
+        run: echo Branch $GITHUB_REF - Commit $GITHUB_SHA
