@@ -17,4 +17,5 @@ jobs:
 
       - name: Black Formatter
         uses: lgeiger/black-action@v1.0.1
-        args: "--check --diff ."
+        with:
+          args: "--check --diff ."
