@@ -15,5 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Black Check
-        uses: jpetrucciani/black-check@20.8b1
+      - name: Black Formatter
+        uses: lgeiger/black-action@v1.0.1
+        args: "--check --diff ."
